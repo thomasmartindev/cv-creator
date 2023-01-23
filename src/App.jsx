@@ -1,1 +1,9 @@
-export const App = () => 'cv-creator'
+import { Header } from './components/Header'
+
+export const App = () => {
+  return (
+    <>
+      <Header />
+    </>
+  )
+}
