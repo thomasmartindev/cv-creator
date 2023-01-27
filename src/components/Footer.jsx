@@ -22,7 +22,7 @@ const Container = styled.footer`
   background-color: ${({ theme }) => theme.dark};
   bottom: 0;
   column-gap: 1rem;
-  color: ${({ theme }) => theme.light};
+  color: ${({ theme }) => theme.midLight};
   display: flex;
   font-size: 1.6rem;
   font-weight: 400;
@@ -33,7 +33,7 @@ const Container = styled.footer`
 `
 
 const Github = styled(FaGithub)`
-  color: ${({ theme }) => theme.light};
+  color: ${({ theme }) => theme.midLight};
   cursor: pointer;
   transition: transform 0.3s ease-in-out;
 
