@@ -2,20 +2,22 @@ import styled from 'styled-components'
 
 export const Header = () => {
   return (
-    <StyledContainer>
-      <StyledWrapper>
-        <h1>CV CREATOR</h1>
-      </StyledWrapper>
-    </StyledContainer>
+    <Container>
+      <Wrapper>
+        <h1>
+          CV CREATOR
+        </h1>
+      </Wrapper>
+    </Container>
   )
 }
 
-const StyledContainer = styled.header`
+const Container = styled.header`
   background-color: ${({ theme }) => theme.dark};
 `
 
-const StyledWrapper = styled.div`
-  color: ${({ theme }) => theme.light};
+const Wrapper = styled.div`
+  color: ${({ theme }) => theme.midLight};
   display: flex;
   font-size: 5rem;
   font-weight: 700;
