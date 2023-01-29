@@ -3,12 +3,12 @@ import { Sidebar } from './Sidebar'
 import { Main } from './Main'
 import { IconContext } from 'react-icons/lib'
 import Theme from '../../theme/Theme'
-
 import styled from 'styled-components'
+import React from 'react'
 
-export const CV = () => {
+export const CV = React.forwardRef(({}, ref) => {
   return (
-    <Container>
+    <Container ref={ref}>
       <IconContext.Provider
         value={{
           color: Theme.mid,
@@ -23,7 +23,7 @@ export const CV = () => {
       </IconContext.Provider>
     </Container>
   )
-}
+})
 
 const Container = styled.div`
   box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
