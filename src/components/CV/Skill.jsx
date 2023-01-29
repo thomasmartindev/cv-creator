@@ -1,8 +1,6 @@
 import styled from 'styled-components'
 
-export const Skill = ({ 
-  skill 
-}) => {
+export const Skill = ({ skill }) => {
   return (
     <LI>
       {skill}
