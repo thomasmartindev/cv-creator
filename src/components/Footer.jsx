@@ -20,15 +20,13 @@ export const Footer = () => {
 const Container = styled.footer`
   align-items: center;
   background-color: ${({ theme }) => theme.dark};
-  bottom: 0;
   column-gap: 1rem;
   color: ${({ theme }) => theme.midLight};
   display: flex;
   font-size: 1.6rem;
-  font-weight: 400;
   justify-content: center;
+  margin-top: 10rem;
   padding: 1rem 0;
-  position: fixed;
   width: 100%;
 `
 
