@@ -22,10 +22,10 @@ const Wrapper = styled.div`
   font-size: 5rem;
   font-weight: 700;
   margin: 0 auto;
-  max-width: 1800px;
+  max-width: 1600px;
   padding: 2rem 8rem;
 
-  @media (max-width: 1600px) {
+  @media (max-width: 1400px) {
     justify-content: center;
   }
 `
