@@ -23,6 +23,42 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   button {
+    background-color: ${({ theme }) => theme.dark};
+    border: none;
+    border-radius: 5px;
+    color: ${({ theme }) => theme.midLight};
     cursor: pointer;
+    font-family: 'Roboto';
+    font-size: 1.6rem;
+    font-weight: 500;
+    padding: 1rem 0;
+    width: 100%;
+  }
+  
+  button:hover {
+    background-color: ${({ theme }) => theme.darkHover};
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    row-gap: 1rem;
+  }
+
+  input,
+  textarea {
+    border: none;
+    border-radius: 5px;
+    font-family: 'Roboto';
+    font-size: 1.6rem;
+    outline: none;
+    padding: 1rem;
+    width: 100%;
+  }
+
+  textarea {
+    height: 80px;
+    resize: none;
   }
 `
