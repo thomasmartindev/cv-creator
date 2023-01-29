@@ -1,8 +1,8 @@
 # CV Creator
 
-React application which allows users to create their own resume using a ready template and download it in a PDF format.
+React application that allows users to input their details into a CV template which is downloadable in PDF format.
 
-[Live Demo](https://thomasmdevelopment.github.io/cv-application/)
+[Live Demo](https://thomasmdevelopment.github.io/cv-creator/)
 
 ## Built with
 
