@@ -22,23 +22,23 @@ export const Header = () => {
       </Occupation>
       <IconContext.Provider
         value={{
-          size: '15px'
+          size: '15px',
         }}
       >
         <Wrapper>
-          <MdEmail />
+          <EmailIcon />
           <p>
             {main.cv.personal.email}
           </p>
         </Wrapper>
         <PhoneWrapper>
-          <MdPhone />
+          <PhoneIcon />
           <p>
             {main.cv.personal.phoneNumber}
           </p>
         </PhoneWrapper>
         <Wrapper>
-          <MdLocationPin />
+          <LocationIcon />
           <p>
             {main.cv.personal.location}
           </p>
@@ -55,6 +55,12 @@ const Container = styled.div`
   flex-direction: column;
   padding: 2.5rem;
 `
+const EmailIcon = styled(MdEmail)`
+  flex-shrink: 0;
+`
+const LocationIcon = styled(MdLocationPin)`
+  flex-shrink: 0;
+`
 
 const Name = styled.h2`
   font-family: 'Roboto Slab';
@@ -70,17 +76,23 @@ const Occupation = styled.h3`
   margin: 1rem 0 2.5rem;
 `
 
+const PhoneIcon = styled(MdPhone)`
+  flex-shrink: 0;
+`
+
 const PhoneWrapper = styled.div`
   align-items: center;
   column-gap: 1rem;
   display: flex;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   margin: 0.5rem 0;
+  word-break: break-all;
 `
 
 const Wrapper = styled.div`
   align-items: center;
   column-gap: 1rem;
   display: flex;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
+  word-break: break-all;
 `
