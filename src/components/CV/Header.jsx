@@ -55,9 +55,11 @@ const Container = styled.div`
   flex-direction: column;
   padding: 2.5rem;
 `
+
 const EmailIcon = styled(MdEmail)`
   flex-shrink: 0;
 `
+
 const LocationIcon = styled(MdLocationPin)`
   flex-shrink: 0;
 `
