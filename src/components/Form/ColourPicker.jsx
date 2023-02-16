@@ -34,4 +34,9 @@ const Input = styled.input`
   &:hover {
     transform: scale(1.05);
   }
+
+  @media (max-width: 600px) {
+    height: 60px;
+    width: 60px;
+  }
 `

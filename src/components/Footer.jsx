@@ -28,6 +28,10 @@ const Container = styled.footer`
   margin-top: 10rem;
   padding: 1rem 0;
   width: 100%;
+
+  @media (max-width: 600px) {
+    font-size: 1.4rem;
+  }
 `
 
 const Github = styled(FaGithub)`
@@ -45,4 +49,8 @@ const Link = styled.a`
   display: flex;
   font-size: 2rem;
   text-decoration: none;
+
+  @media (max-width: 600px) {
+    font-size: 1.8rem;
+  }
 `

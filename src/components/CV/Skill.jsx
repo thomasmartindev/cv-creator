@@ -11,4 +11,8 @@ export const Skill = ({ skill }) => {
 const LI = styled.li`
   font-size: 1.4rem;
   list-style: none;
+
+  @media (max-width: 900px) {
+    font-size: 1.556vw;
+  }
 `

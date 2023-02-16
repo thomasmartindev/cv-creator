@@ -33,6 +33,11 @@ export const GlobalStyle = createGlobalStyle`
     font-weight: 500;
     padding: 1rem 0;
     width: 100%;
+
+    @media (max-width: 600px) {
+      font-size: 1.4rem;
+      padding: 0.8rem 0;
+    }
   }
   
   button:hover {
@@ -55,10 +60,19 @@ export const GlobalStyle = createGlobalStyle`
     outline: none;
     padding: 1rem;
     width: 100%;
+
+    @media (max-width: 600px) {
+      font-size: 1.4rem;
+      padding: 0.8rem;
+    }
   }
 
   textarea {
     height: 80px;
     resize: none;
+
+    @media (max-width: 600px) {
+      height: 120px;
+    }
   }
 `

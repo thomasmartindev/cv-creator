@@ -117,17 +117,34 @@ const Container = styled.div`
   flex: 1;
   padding: 2rem;
   width: 794px;
+
+  @media (max-width: 900px) {
+    width: 88.222vw;
+  }
+
+  @media (max-width: 600px) {
+    padding: 1.5rem;
+  }
 `
 
 const Heading = styled.h3`
   font-size: 1.8rem;
   font-weight: 500;
   margin: 4rem 0 1rem;
+
+  @media (max-width: 600px) {
+    font-size: 1.6rem;
+  }
 `
 
 const ThemeHeading = styled.h3`
   font-size: 1.8rem;
   font-weight: 500;
+
+  @media (max-width: 600px) {
+    font-size: 1.6rem;
+    margin-top: 1rem;
+  }
 `
 
 const ThemeWrapper = styled.div`
@@ -143,4 +160,8 @@ const Wrapper = styled.div`
   column-gap: 5rem;
   display: flex;
   margin-top: 3rem;
+
+  @media (max-width: 400px) {
+    column-gap: 2.5rem;
+  }
 `

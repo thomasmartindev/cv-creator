@@ -33,6 +33,12 @@ const Container = styled.div`
   position: sticky;
   top: 2rem;
   width: 794px;
+
+  @media (max-width: 900px) {
+    outline: 0.667vw solid ${({ theme }) => theme.dark};
+    height: 124.778vw;
+    width: 88.222vw;
+  }
 `
 
 const Wrapper = styled.div`

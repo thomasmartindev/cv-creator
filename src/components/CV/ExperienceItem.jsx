@@ -31,13 +31,13 @@ export const ExperienceItem = ({
       </Company>
       <Wrapper>
         <DurationWrapper>
-          <FaCalendarAlt />
+          <CalendarIcon />
           <p>
             {from} - {to}
           </p>
         </DurationWrapper>
         <LocationWrapper>
-          <MdLocationPin />
+          <LocationIcon />
           <p>
             {location}
           </p>
@@ -50,8 +50,24 @@ export const ExperienceItem = ({
   )
 }
 
+const CalendarIcon = styled(FaCalendarAlt)`
+  flex-shrink: 0;
+  height: 15px;
+  width: 15px;
+
+  @media (max-width: 900px) {
+    height: 1.667vw;
+    width: 1.667vw;
+  }
+`
+
 const Company = styled.p`
   color: ${({ theme }) => theme};
+  font-size: 1.6rem;
+
+  @media (max-width: 900px) {
+    font-size: 1.778vw;
+  }
 `
 
 const Container = styled.div`
@@ -59,22 +75,50 @@ const Container = styled.div`
   flex-direction: column;
   margin-bottom: 2.5rem;
   row-gap: 0.5rem;
+
+  @media (max-width: 900px) {
+    margin-bottom: 2.778vw;
+    row-gap: 0.556vw;
+  }
 `
 
 const DurationWrapper = styled.div`
   align-items: center;
   column-gap: 0.5rem;
   display: flex;
+
+  @media (max-width: 900px) {
+    column-gap: 0.556vw;
+  }
+`
+
+const LocationIcon = styled(MdLocationPin)`
+  flex-shrink: 0;
+  height: 15px;
+  width: 15px;
+
+  @media (max-width: 900px) {
+    height: 1.667vw;
+    width: 1.667vw;
+  }
 `
 
 const LocationWrapper = styled.div`
   align-items: center;
   column-gap: 0.5rem;
   display: flex;
+
+  @media (max-width: 900px) {
+    column-gap: 0.556vw;
+  }
 `
 
 const Position = styled.p`
   font-size: 2rem;
+
+  @media (max-width: 900px) {
+    font-size: 2.222vw;
+  }
 `
 
 const Summary = styled.ul`
@@ -84,15 +128,29 @@ const Summary = styled.ul`
   list-style: disc;
   list-style-position: outside;
   row-gap: 0.5rem;
+
+  @media (max-width: 900px) {
+    row-gap: 0.556vw;
+  }
 `
 
 const SummaryItem = styled.li`
   font-size: 1.4rem;
   margin-left: 3rem;
+
+  @media (max-width: 900px) {
+    font-size: 1.556vw;
+    margin-left: 3.333vw;
+  }
 `
 
 const Wrapper = styled.div`
   column-gap: 3rem;
   display: flex;
   font-size: 1.4rem;
+
+  @media (max-width: 900px) {
+    column-gap: 3.333vw;
+    font-size: 1.556vw;
+  }
 `

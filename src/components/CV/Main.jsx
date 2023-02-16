@@ -37,6 +37,10 @@ const Container = styled.div`
   flex-direction: column;
   flex: 1;
   padding: 2.5rem;
+
+  @media (max-width: 900px) {
+    padding: 2.778vw;
+  }
 `
 
 const Heading = styled.h3`
@@ -44,4 +48,9 @@ const Heading = styled.h3`
   font-size: 2.2rem;
   font-weight: 500;
   margin-bottom: 1rem;
+
+  @media (max-width: 900px) {
+    font-size: 2.444vw;
+    margin-bottom: 1.111vw;
+  }
 `

@@ -54,20 +54,38 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   padding: 2.5rem;
+
+  @media (max-width: 900px) {
+    padding: 2.778vw;
+  }
 `
 
 const EmailIcon = styled(MdEmail)`
   flex-shrink: 0;
+
+  @media (max-width: 900px) {
+    height: 1.667vw;
+    width: 1.667vw;
+  }
 `
 
 const LocationIcon = styled(MdLocationPin)`
   flex-shrink: 0;
+
+  @media (max-width: 900px) {
+    height: 1.667vw;
+    width: 1.667vw;
+  }
 `
 
 const Name = styled.h2`
   font-family: 'Roboto Slab';
   font-size: 3rem;
   font-weight: 400;
+
+  @media (max-width: 900px) {
+    font-size: 3.333vw;
+  }
 `
 
 const Occupation = styled.h3`
@@ -76,10 +94,20 @@ const Occupation = styled.h3`
   font-style: italic;
   font-weight: 300;
   margin: 1rem 0 2.5rem;
+
+  @media (max-width: 900px) {
+    font-size: 2.222vw;
+    margin: 1.111vw 0 2.778vw;
+  }
 `
 
 const PhoneIcon = styled(MdPhone)`
   flex-shrink: 0;
+
+  @media (max-width: 900px) {
+    height: 1.667vw;
+    width: 1.667vw;
+  }
 `
 
 const PhoneWrapper = styled.div`
@@ -89,6 +117,12 @@ const PhoneWrapper = styled.div`
   font-size: 1.2rem;
   margin: 0.5rem 0;
   word-break: break-all;
+
+  @media (max-width: 900px) {
+    column-gap: 1.111vw;
+    font-size: 1.333vw;
+    margin: 0.556vw 0;
+  }
 `
 
 const Wrapper = styled.div`
@@ -97,4 +131,9 @@ const Wrapper = styled.div`
   display: flex;
   font-size: 1.2rem;
   word-break: break-all;
+
+  @media (max-width: 900px) {
+    column-gap: 1.111vw;
+    font-size: 1.333vw;
+  }
 `

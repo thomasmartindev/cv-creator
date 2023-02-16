@@ -28,4 +28,14 @@ const Wrapper = styled.div`
   @media (max-width: 1400px) {
     justify-content: center;
   }
+
+  @media (max-width: 600px) {
+    font-size: 4rem;
+    padding: 1.5rem 8rem;
+  }
+
+  @media (max-width: 400px) {
+    font-size: 3.5rem;
+    padding: 1.25rem 5rem;
+  }
 `
