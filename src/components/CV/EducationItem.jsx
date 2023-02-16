@@ -1,6 +1,9 @@
 import styled from 'styled-components'
 import { FaCalendarAlt } from 'react-icons/fa'
 import { MdLocationPin } from 'react-icons/md'
+import { Icon } from '../utilities/Icon'
+import { IconContext } from 'react-icons/lib'
+import Theme from '../../theme/Theme'
 
 export const EducationItem = ({
   from,
@@ -20,32 +23,31 @@ export const EducationItem = ({
       >
         {institution}
       </Institution>
-      <Wrapper>
-        <CalendarIcon />
-        <p>
-          {from} - {to}
-        </p>
-      </Wrapper>
-      <Wrapper>
-        <LocationIcon />
-        <p>
-          {location}
-        </p>
-      </Wrapper>
+      <IconContext.Provider
+        value={{
+          color: Theme.mid
+        }}
+      >
+        <Wrapper>
+          <Icon
+            as={FaCalendarAlt}
+          />
+          <p>
+            {from} - {to}
+          </p>
+        </Wrapper>
+        <Wrapper>
+          <Icon
+            as={MdLocationPin}
+          />
+          <p>
+            {location}
+          </p>
+        </Wrapper>
+      </IconContext.Provider>
     </Container>
   )
 }
-
-const CalendarIcon = styled(FaCalendarAlt)`
-  flex-shrink: 0;
-  height: 15px;
-  width: 15px;
-
-  @media (max-width: 900px) {
-    height: 1.667vw;
-    width: 1.667vw;
-  }
-`
 
 const Container = styled.li`
   display: flex;
@@ -65,17 +67,6 @@ const Institution = styled.p`
 
   @media (max-width: 900px) {
     font-size: 1.778vw;
-  }
-`
-
-const LocationIcon = styled(MdLocationPin)`
-  flex-shrink: 0;
-  height: 15px;
-  width: 15px;
-
-  @media (max-width: 900px) {
-    height: 1.667vw;
-    width: 1.667vw;
   }
 `
 

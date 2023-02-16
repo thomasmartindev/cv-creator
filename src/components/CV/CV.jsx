@@ -1,26 +1,17 @@
 import { Header } from './Header'
 import { Sidebar } from './Sidebar'
 import { Main } from './Main'
-import { IconContext } from 'react-icons/lib'
-import Theme from '../../theme/Theme'
 import styled from 'styled-components'
 import React from 'react'
 
 export const CV = React.forwardRef(({}, ref) => {
   return (
     <Container ref={ref}>
-      <IconContext.Provider
-        value={{
-          color: Theme.mid,
-          size: '15px'
-        }}
-      >
-        <Wrapper>
-          <Header />
-          <Sidebar />
-        </Wrapper>
-        <Main />
-      </IconContext.Provider>
+      <Wrapper>
+        <Header />
+        <Sidebar />
+      </Wrapper>
+      <Main />
     </Container>
   )
 })

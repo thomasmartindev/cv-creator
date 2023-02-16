@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 import { useContext } from 'react'
 import { MainContext } from '../Main'
-import { MdEmail, MdLocationPin, MdPhone } from 'react-icons/md'
-import { IconContext } from 'react-icons/lib'
+import { MdLocationPin, MdPhone } from 'react-icons/md'
+import { Icon } from '../utilities/Icon' 
 
 export const Header = () => {
   const main = useContext(MainContext)
@@ -20,30 +20,28 @@ export const Header = () => {
       <Occupation>
         {main.cv.personal.occupation}
       </Occupation>
-      <IconContext.Provider
-        value={{
-          size: '15px',
-        }}
-      >
-        <Wrapper>
-          <EmailIcon />
-          <p>
-            {main.cv.personal.email}
-          </p>
-        </Wrapper>
-        <PhoneWrapper>
-          <PhoneIcon />
-          <p>
-            {main.cv.personal.phoneNumber}
-          </p>
-        </PhoneWrapper>
-        <Wrapper>
-          <LocationIcon />
-          <p>
-            {main.cv.personal.location}
-          </p>
-        </Wrapper>
-      </IconContext.Provider>
+      <Wrapper>
+        <Icon />
+        <p>
+          {main.cv.personal.email}
+        </p>
+      </Wrapper>
+      <PhoneWrapper>
+        <Icon
+          as={MdPhone}
+        />
+        <p>
+          {main.cv.personal.phoneNumber}
+        </p>
+      </PhoneWrapper>
+      <Wrapper>
+        <Icon
+          as={MdLocationPin}
+        />
+        <p>
+          {main.cv.personal.location}
+        </p>
+      </Wrapper>
     </Container>
   )
 }
@@ -57,24 +55,6 @@ const Container = styled.div`
 
   @media (max-width: 900px) {
     padding: 2.778vw;
-  }
-`
-
-const EmailIcon = styled(MdEmail)`
-  flex-shrink: 0;
-
-  @media (max-width: 900px) {
-    height: 1.667vw;
-    width: 1.667vw;
-  }
-`
-
-const LocationIcon = styled(MdLocationPin)`
-  flex-shrink: 0;
-
-  @media (max-width: 900px) {
-    height: 1.667vw;
-    width: 1.667vw;
   }
 `
 
@@ -98,15 +78,6 @@ const Occupation = styled.h3`
   @media (max-width: 900px) {
     font-size: 2.222vw;
     margin: 1.111vw 0 2.778vw;
-  }
-`
-
-const PhoneIcon = styled(MdPhone)`
-  flex-shrink: 0;
-
-  @media (max-width: 900px) {
-    height: 1.667vw;
-    width: 1.667vw;
   }
 `
 

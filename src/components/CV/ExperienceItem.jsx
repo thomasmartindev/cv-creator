@@ -1,6 +1,9 @@
 import styled from 'styled-components'
 import { FaCalendarAlt } from 'react-icons/fa'
 import { MdLocationPin } from 'react-icons/md'
+import { Icon } from '../utilities/Icon'
+import { IconContext } from 'react-icons/lib'
+import Theme from '../../theme/Theme'
 
 export const ExperienceItem = ({
   company,
@@ -30,18 +33,28 @@ export const ExperienceItem = ({
         {company}
       </Company>
       <Wrapper>
-        <DurationWrapper>
-          <CalendarIcon />
-          <p>
-            {from} - {to}
-          </p>
-        </DurationWrapper>
-        <LocationWrapper>
-          <LocationIcon />
-          <p>
-            {location}
-          </p>
-        </LocationWrapper> 
+        <IconContext.Provider
+          value={{
+            color: Theme.mid
+          }}
+        >
+          <DurationWrapper>
+            <Icon
+              as={FaCalendarAlt}
+            />
+            <p>
+              {from} - {to}
+            </p>
+          </DurationWrapper>
+          <LocationWrapper>
+            <Icon
+              as={MdLocationPin}
+            />
+            <p>
+              {location}
+            </p>
+          </LocationWrapper>
+        </IconContext.Provider>
       </Wrapper>
       <Summary>
         {summaryItems}
@@ -49,17 +62,6 @@ export const ExperienceItem = ({
     </Container>
   )
 }
-
-const CalendarIcon = styled(FaCalendarAlt)`
-  flex-shrink: 0;
-  height: 15px;
-  width: 15px;
-
-  @media (max-width: 900px) {
-    height: 1.667vw;
-    width: 1.667vw;
-  }
-`
 
 const Company = styled.p`
   color: ${({ theme }) => theme};
@@ -89,17 +91,6 @@ const DurationWrapper = styled.div`
 
   @media (max-width: 900px) {
     column-gap: 0.556vw;
-  }
-`
-
-const LocationIcon = styled(MdLocationPin)`
-  flex-shrink: 0;
-  height: 15px;
-  width: 15px;
-
-  @media (max-width: 900px) {
-    height: 1.667vw;
-    width: 1.667vw;
   }
 `
 
