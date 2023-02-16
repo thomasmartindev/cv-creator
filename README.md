@@ -2,7 +2,11 @@
 
 React application that allows users to input their details into a CV template which is downloadable in PDF format.
 
-[Live Demo](https://thomasmdevelopment.github.io/cv-creator/)
+The template contains information such as work experience, education, skills and more. The colour scheme of the template is customisable.
+
+To avoid prop drilling, this project uses the [Context API](https://reactjs.org/docs/context.html) to share data across its components.
+
+[Live Preview](https://thomasmdevelopment.github.io/cv-creator/)
 
 ## Built with
 
