@@ -6,7 +6,7 @@ The template contains information such as work experience, education, skills and
 
 To avoid prop drilling, this project uses the [Context API](https://reactjs.org/docs/context.html) to share data across its components.
 
-[Live Preview](https://thomasmdevelopment.github.io/cv-creator/)
+[Live Preview](https://thomasmartindev.github.io/cv-creator/)
 
 ## Built with
 
