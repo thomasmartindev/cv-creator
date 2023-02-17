@@ -463,7 +463,7 @@ Error generating stack: `+i.message+`
     flex-direction: column;
     row-gap: 4rem;
   }
-`,B0=()=>re(H0,{children:[A("p",{children:"thomasmdevelopment"}),A(G0,{href:"https://github.com/thomasmdevelopment",target:"_blank",children:A(W0,{})})]}),H0=H.footer`
+`,B0=()=>re(H0,{children:[A("p",{children:"thomasmartindev"}),A(G0,{href:"https://github.com/thomasmartindev",target:"_blank",children:A(W0,{})})]}),H0=H.footer`
   align-items: center;
   background-color: ${({theme:e})=>e.dark};
   column-gap: 1rem;
